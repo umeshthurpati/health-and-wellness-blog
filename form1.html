@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Feedback - Health & Wellness Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="description.html">About</a></li>
+            <li><a href="form1.html">Feedback</a></li>
+            <li><a href="form2.html">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-title">Share Your Wellness Journey</h1>
+            <form id="feedbackForm" onsubmit="return validateFeedbackForm()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" min="1" max="120">
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="topic">Favorite Wellness Topic</label>
+                    <select id="topic" name="topic">
+                        <option value="">Select a topic</option>
+                        <option value="nutrition">Nutrition</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="meditation">Meditation</option>
+                        <option value="mental-health">Mental Health</option>
+                        <option value="sleep">Sleep</option>
+                        <option value="stress">Stress Management</option>
+                    </select>
+                    <div class="error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="5" placeholder="Share your wellness journey, experiences, or suggestions"></textarea>
+                    <div class="error"></div>
+                </div>
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
